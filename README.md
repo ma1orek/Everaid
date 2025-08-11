@@ -1,12 +1,16 @@
-# 🚨 EverAid - Emergency AI Assistant
+# 🚨 EverAid - Any Emergency AI Assistant
 
 > **You're not alone. Open EverAid.**
 
-[![OpenAI OSS Hackathon](https://img.shields.io/badge/OpenAI-OSS%20Hackathon-blue?style=for-the-badge&logo=openai)](https://openai.devpost.com/)
+## 🌐 [**everaid.app**](https://everaid.app)
+
+*Visit our website for live demo and more information*
+
+[![OpenAI Open Model Hackathon](https://img.shields.io/badge/OpenAI-Open%20Model%20Hackathon-blue?style=for-the-badge&logo=openai)](https://openai.devpost.com/)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg?style=for-the-badge)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-React%20Native%20%2B%20Web-blue?style=for-the-badge&logo=react)](https://reactnative.dev/)
 
-A mobile-first AI emergency toolkit that works **online and offline**, providing step-by-step guidance for any crisis situation. Built for the **OpenAI OSS Hackathon** with gpt-oss + Supabase.
+A mobile-first AI emergency toolkit that works **online and offline**, providing step-by-step guidance for any crisis situation. Built for the **OpenAI Open Model Hackathon** with gpt-oss + Supabase.
 
 ## 🎯 Built for Humanity
 
@@ -15,6 +19,7 @@ A mobile-first AI emergency toolkit that works **online and offline**, providing
 ### 🏆 Hackathon Categories
 - **For Humanity** - Practical, high-impact guidance for first aid, evacuation, and crisis response
 - **Best Local Agent** - Offline-first AI with local fallback behavior in real use cases
+- **OpenAI Open Model Hackathon** - Built specifically for this competition
 
 ## ✨ Key Features
 
@@ -199,10 +204,10 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 - **Issues**: [GitHub Issues](https://github.com/ma1orek/EverAid/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/ma1orek/EverAid/discussions)
-- **Email**: [Your Contact]
+- **Email**: [idzikbartosz@gmail.com](mailto:idzikbartosz@gmail.com)
 
 ---
 
-**Built with ❤️ for the OpenAI OSS Hackathon**
+**Built with ❤️ for the OpenAI Open Model Hackathon**
 
 *EverAid - Because in emergencies, you're not alone.*
