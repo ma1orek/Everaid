@@ -1,133 +1,208 @@
-# EverAid - Emergency Aid Mobile Application
+# 🚨 EverAid - Emergency AI Assistant
 
-## Product Summary
+> **You're not alone. Open EverAid.**
 
-EverAid is a mobile emergency assistance application built with React Native/Expo, designed to provide step-by-step guidance during emergency situations. The app works offline and features a dark UI theme optimized for stress situations and low-light conditions.
+[![OpenAI OSS Hackathon](https://img.shields.io/badge/OpenAI-OSS%20Hackathon-blue?style=for-the-badge&logo=openai)](https://openai.devpost.com/)
+[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg?style=for-the-badge)](LICENSE)
+[![Platform](https://img.shields.io/badge/Platform-React%20Native%20%2B%20Web-blue?style=for-the-badge&logo=react)](https://reactnative.dev/)
 
-### Core Features
-- **Offline-first**: All functionality works without internet connection
-- **Dark theme**: Optimized for emergency situations and battery conservation
-- **Category-based organization**: Health, Survive, Fix, Speak umbrellas
-- **Step-by-step guidance**: Interactive chat-style emergency protocols
-- **Quick response**: Urgency-based prioritization and time estimates
-- **Pack sharing**: QR code sharing for custom emergency packs
+A mobile-first AI emergency toolkit that works **online and offline**, providing step-by-step guidance for any crisis situation. Built for the **OpenAI OSS Hackathon** with gpt-oss + Supabase.
 
-## Screen Overview
+## 🎯 Built for Humanity
 
-### Primary Navigation
-1. **Home** - Main dashboard with filterable emergency packs in 2-column grid
-2. **Chat/Guide** - Interactive step-by-step emergency guidance 
-3. **Settings** - App configuration and pack management
+**EverAid** is designed for real-world emergencies where seconds matter and connectivity fails. Whether you're dealing with a medical crisis, survival situation, technical failure, or communication breakdown - EverAid provides clear, actionable steps that work with or without internet.
 
-### Secondary Screens
-4. **Manage Packs** - User pack library with edit/delete actions
-5. **Pack Builder** - Create/edit custom emergency packs
-   - **Details** - Basic pack information (title, category, urgency)
-   - **Steps** - Add/edit step-by-step instructions
-   - **Review** - Final preview before saving
-6. **App Profile Settings** - User preferences and app configuration
-7. **Import Preview** - Preview imported pack before adding to library
-8. **QR Share** - Generate QR codes for pack sharing
+### 🏆 Hackathon Categories
+- **For Humanity** - Practical, high-impact guidance for first aid, evacuation, and crisis response
+- **Best Local Agent** - Offline-first AI with local fallback behavior in real use cases
 
-## User Flows
+## ✨ Key Features
 
-### Core Emergency Flow
+### 🚫 Offline-First Design
+- **80 pre-loaded emergency packs** cached locally
+- **Local AI fallback** when networks fail
+- **Service Worker** ensures critical content is always available
+
+### 🧠 AI-Powered Guidance
+- **gpt-oss-20b** via Supabase Edge Functions
+- **Real-time chat** for custom emergency scenarios
+- **Multilingual support** (PL/EN auto-detection)
+- **Structured JSON output** for consistent pack creation
+
+### 🎨 Mobile-First UI/UX
+- **Dark theme** optimized for low-light emergency situations
+- **High contrast** design for stress-free reading
+- **Zero-friction** interface - get help in under 3 taps
+- **Responsive design** that works on any device
+
+### 📱 Cross-Platform
+- **React Native** mobile app (iOS/Android)
+- **Web version** for hackathon demo
+- **PWA support** for offline access
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+- Supabase account
+- Together AI API key
+
+### 1. Clone & Install
+```bash
+git clone https://github.com/ma1orek/EverAid.git
+cd EverAid
+npm install
 ```
-Home → Filter by Category → Select Pack → Chat/Guide → Follow Steps → Complete/Exit
+
+### 2. Environment Setup
+```bash
+cp .env.example .env
 ```
 
-### Pack Management Flow
-```
-Settings → Manage Packs → [Edit existing] / [Create new via Pack Builder]
-Pack Builder: Details → Steps → Review → Save
-```
-
-### Import/Share Flow
-```
-Share: Chat/Settings → QR Share → Generate QR
-Import: External QR scan → Import Preview → Add to Library
+Fill in your environment variables:
+```env
+SUPABASE_URL=your_supabase_url
+SUPABASE_ANON_KEY=your_supabase_anon_key
+SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
+TOGETHER_API_KEY=your_together_api_key
 ```
 
-### Search Flow
+### 3. Run the App
+
+#### Mobile (React Native)
+```bash
+npm run start
+# Scan QR with Expo Go app
 ```
-Home → Search (overlay) → Filter results → Select Pack → Chat/Guide
+
+#### Web Version
+```bash
+npm run web
+# Open http://localhost:19006
 ```
 
-## UI Terminology Glossary
+## 🏗️ Architecture
 
-### Components
-- **Knowledge Box/Pack Card** - Emergency pack display card with icon, title, CTA, urgency badge
-- **Filter Chips** - Category filters (Health, Survive, Fix, Speak) with sticky behavior
-- **Urgency Badge** - Color-coded priority indicators (Emergency/Warning/Info)
-- **Steps Block** - Chat bubble containing step-by-step instructions
-- **Quick Chips** - Context-aware suggestion buttons below chat input
-- **Bottom CTA** - Primary action button with gradient backdrop
-- **Guide Book** - Emergency pack header shown in Chat with title and urgency
+### Tech Stack
+- **Frontend**: React Native + Expo, React (web)
+- **Backend**: Supabase Edge Functions (Hono)
+- **AI**: Together AI (gpt-oss-20b)
+- **Database**: Supabase PostgreSQL
+- **Styling**: Tailwind CSS + custom design system
+- **State**: React hooks + local storage
 
-### Interactions
-- **Filter** - Category-based content filtering on Home screen
-- **Search** - Text-based pack discovery with overlay interface  
-- **Share Pack** - QR code generation for pack distribution (Chat/Settings only)
-- **Handoff** - Transferring emergency situation to professional responders
+### Data Flow
+```
+User Input → Edge Function → gpt-oss-20b → Structured Response → UI Update
+     ↓
+Local Cache ← Supabase Database ← Pack Storage
+```
 
-### Categories (Umbrellas)
-- **Health** (#34C759) - Medical emergencies and first aid
-- **Survive** (#FF9F0A) - Wilderness and survival situations
-- **Fix** (#0A84FF) - Mechanical repairs and troubleshooting
-- **Speak** (#00C7BE) - Communication aids and language assistance
+### Security Model
+- **Secrets** stored in Supabase Edge Functions
+- **Client** uses only public anon key
+- **No sensitive data** in browser/mobile
+- **Local-first** design respects privacy
+
+## 📦 Emergency Pack System
+
+### 4 Core Categories
+- **🏥 Health** - Medical emergencies, first aid, symptoms
+- **🆘 Survive** - Natural disasters, accidents, survival skills
+- **🔧 Fix** - Technical issues, repairs, troubleshooting
+- **💬 Speak** - Communication, language barriers, crisis management
+
+### Pack Structure
+```json
+{
+  "type": "pack",
+  "pack": {
+    "title": "Stop Bleeding",
+    "oneLiner": "Immediate steps to control bleeding",
+    "category": "Health",
+    "urgency": "EMERGENCY",
+    "estMinutes": 5,
+    "steps": [
+      {
+        "title": "Apply direct pressure",
+        "description": "Use clean cloth and press firmly",
+        "timerSeconds": 300
+      }
+    ]
+  }
+}
+```
 
 ### Urgency Levels
-- **Emergency** (Red) - Life-threatening situations requiring immediate action
-- **Warning** (Orange/Yellow) - Serious situations with potential for escalation
-- **Info** (Blue/Gray) - Preventive measures and general guidance
+- **🚨 EMERGENCY** - Life-threatening situations (red)
+- **⚠️ WARNING** - Serious but not critical (yellow)  
+- **ℹ️ INFO** - General guidance (blue)
 
-## Development Checklist
+## 🧪 Testing & Development
 
-### ✅ Completed
-- [x] Core UI components and screens
-- [x] Dark theme implementation
-- [x] Offline data structure
-- [x] Category filtering system
-- [x] Chat-style guidance interface
-- [x] Pack builder functionality
-- [x] QR sharing system
+### AI Testing
+```javascript
+// Test AI connection
+setupAITesting();
 
-### 🔲 Production Readiness
-- [ ] Real-world content validation with emergency professionals
-- [ ] Accessibility testing (VoiceOver, large text, high contrast)
-- [ ] Performance optimization for older devices
-- [ ] Internationalization framework
-- [ ] Analytics and crash reporting
-- [ ] App store compliance (medical disclaimers, liability)
-- [ ] Content moderation for user-generated packs
-- [ ] Backup/sync functionality (optional online features)
+// Test database
+setupDatabaseTesting();
 
-### 🚨 Critical Pre-Launch
-- [ ] Medical/legal review of health-related content
-- [ ] Emergency services coordination testing
-- [ ] Battery optimization validation
-- [ ] Stress testing UI in actual emergency scenarios
-- [ ] Clear disclaimer about professional medical care
+// Expose functions globally for debugging
+exposeAIFunctionsGlobally();
+```
 
-## Technical Stack
+### Edge Function Testing
+```bash
+# Test Supabase functions
+cd supabase/functions
+npm run dev
+```
 
-- **Framework**: React Native with Expo
-- **Styling**: Tailwind CSS with custom design tokens
-- **Navigation**: Custom screen state management
-- **Storage**: Local JSON-based data persistence
-- **Icons**: Lucide React Native + custom SVGs
-- **Testing**: Manual QA with emergency scenario simulation
+### Quality Assurance
+- **Smoke tests** for core functionality
+- **AI integration tests** for response quality
+- **Offline behavior** validation
+- **Cross-platform** compatibility checks
 
-## Content Guidelines
+## 📚 Documentation
 
-All emergency content should follow these principles:
-1. **Brevity**: Steps should be actionable in under 30 seconds
-2. **Clarity**: Use simple language, avoid medical jargon
-3. **Safety-first**: Always prioritize user safety over completion
-4. **Professional handoff**: Include clear "when to seek help" guidance
-5. **Offline reliability**: No dependencies on network connectivity
+- [API Integration Guide](docs/api-integration-guide.md)
+- [Quick Test Instructions](docs/quick-test-instructions.md)
+- [Troubleshooting Guide](docs/troubleshooting-401.md)
+- [Platform Examples](docs/platform-examples.md)
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+
+### Development Setup
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- **OpenAI** for the OSS Hackathon opportunity
+- **Supabase** for the amazing backend platform
+- **Together AI** for open-source model access
+- **React Native** community for the mobile framework
+
+## 📞 Support
+
+- **Issues**: [GitHub Issues](https://github.com/ma1orek/EverAid/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/ma1orek/EverAid/discussions)
+- **Email**: [Your Contact]
 
 ---
 
-*Last updated: August 2025*
-*Version: 1.0.0 (Prototype)*
+**Built with ❤️ for the OpenAI OSS Hackathon**
+
+*EverAid - Because in emergencies, you're not alone.*
