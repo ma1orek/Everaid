@@ -1,0 +1,73 @@
+{
+  "fontFamily": {
+    "primary": "REM"
+  },
+  "fontSize": {
+    "xs": "12px",
+    "sm": "13px", 
+    "base": "14px",
+    "md": "16px",
+    "lg": "18px",
+    "xl": "20px",
+    "2xl": "24px",
+    "3xl": "32px"
+  },
+  "fontWeight": {
+    "normal": "400",
+    "medium": "500",
+    "semibold": "600",
+    "bold": "700"
+  },
+  "lineHeight": {
+    "tight": "1.2",
+    "normal": "1.5", 
+    "relaxed": "1.6"
+  },
+  "typography": {
+    "h1": {
+      "fontSize": "24px",
+      "fontWeight": "500",
+      "lineHeight": "1.5"
+    },
+    "h2": {
+      "fontSize": "20px", 
+      "fontWeight": "500",
+      "lineHeight": "1.5"
+    },
+    "h3": {
+      "fontSize": "18px",
+      "fontWeight": "500", 
+      "lineHeight": "1.5"
+    },
+    "body": {
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "lineHeight": "1.5"
+    },
+    "bodyLarge": {
+      "fontSize": "16px",
+      "fontWeight": "400", 
+      "lineHeight": "1.5"
+    },
+    "caption": {
+      "fontSize": "13px",
+      "fontWeight": "400",
+      "lineHeight": "1.5"
+    },
+    "button": {
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "lineHeight": "1.5"
+    },
+    "chip": {
+      "fontSize": "13px",
+      "fontWeight": "400", 
+      "lineHeight": "1.5"
+    },
+    "badge": {
+      "fontSize": "12px",
+      "fontWeight": "500",
+      "lineHeight": "1.2"
+    }
+  }
+}

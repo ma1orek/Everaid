@@ -1,0 +1,144 @@
+{
+  "routes": {
+    "home": {
+      "path": "/",
+      "component": "Home",
+      "params": {
+        "filters": {
+          "type": "array",
+          "items": "string", 
+          "description": "Active category filters"
+        },
+        "query": {
+          "type": "string",
+          "description": "Search query string"
+        }
+      },
+      "deepLink": "everaid://home?filters={filters}&query={query}"
+    },
+    "search": {
+      "path": "/search",
+      "component": "SearchOverlay",
+      "params": {
+        "query": {
+          "type": "string",
+          "description": "Initial search query"
+        }
+      },
+      "deepLink": "everaid://search?query={query}"
+    },
+    "chat": {
+      "path": "/chat/:packId",
+      "component": "Chat", 
+      "params": {
+        "packId": {
+          "type": "string",
+          "required": true,
+          "description": "Emergency pack identifier"
+        },
+        "startStep": {
+          "type": "number",
+          "description": "Step index to start from"
+        }
+      },
+      "deepLink": "everaid://chat/{packId}?startStep={startStep}"
+    },
+    "managePacks": {
+      "path": "/manage-packs",
+      "component": "ManagePacks",
+      "params": {},
+      "deepLink": "everaid://manage-packs"
+    },
+    "packBuilder": {
+      "path": "/pack-builder/:mode",
+      "component": "PackBuilder",
+      "params": {
+        "mode": {
+          "type": "string", 
+          "enum": ["create", "edit"],
+          "required": true,
+          "description": "Builder mode"
+        },
+        "packId": {
+          "type": "string",
+          "description": "Pack ID when editing"
+        },
+        "tab": {
+          "type": "string",
+          "enum": ["details", "steps", "review"],
+          "default": "details",
+          "description": "Active builder tab"
+        }
+      },
+      "deepLink": "everaid://pack-builder/{mode}?packId={packId}&tab={tab}"
+    },
+    "importPreview": {
+      "path": "/import-preview",
+      "component": "ImportPreview",
+      "params": {
+        "fileUri": {
+          "type": "string",
+          "required": true, 
+          "description": "URI of imported pack file"
+        }
+      },
+      "deepLink": "everaid://import?file={fileUri}"
+    },
+    "qrShare": {
+      "path": "/qr-share/:packId",
+      "component": "QRShare",
+      "params": {
+        "packId": {
+          "type": "string",
+          "required": true,
+          "description": "Pack ID to generate QR for"
+        }
+      },
+      "deepLink": "everaid://share/{packId}"
+    },
+    "settings": {
+      "path": "/settings",
+      "component": "Settings", 
+      "params": {},
+      "deepLink": "everaid://settings"
+    },
+    "appProfileSettings": {
+      "path": "/settings/profile",
+      "component": "AppProfileSettings",
+      "params": {},
+      "deepLink": "everaid://settings/profile"
+    }
+  },
+  "navigationPatterns": {
+    "emergencyFlow": [
+      "home",
+      "chat"
+    ],
+    "packManagement": [
+      "settings",
+      "managePacks", 
+      "packBuilder"
+    ],
+    "sharing": [
+      "chat",
+      "qrShare"
+    ],
+    "import": [
+      "external",
+      "importPreview",
+      "managePacks"
+    ]
+  },
+  "deepLinkSchema": {
+    "protocol": "everaid",
+    "host": "",
+    "pathPattern": "/{route}/{params}",
+    "querySupport": true,
+    "examples": [
+      "everaid://home",
+      "everaid://chat/bleeding_control",
+      "everaid://pack-builder/create",
+      "everaid://share/custom_pack_123"
+    ]
+  }
+}

@@ -1,0 +1,351 @@
+{
+  "packs": [
+    {
+      "id": "bleeding_control",
+      "umbrella": "HEALTH",
+      "title": "Bleeding Control", 
+      "oneLiner": "Stop heavy bleeding fast until help arrives.",
+      "cta": "Stop Bleeding",
+      "urgency": "EMERGENCY",
+      "etaMin": 10,
+      "origin": "System",
+      "createdAt": "2025-08-08T00:00:00.000Z",
+      "updatedAt": "2025-08-08T00:00:00.000Z",
+      "steps": [
+        {
+          "id": "direct_pressure",
+          "title": "Direct pressure",
+          "body": "Cover with clean cloth and press firmly.",
+          "timerSec": 120
+        },
+        {
+          "id": "elevate_limb", 
+          "title": "Elevate limb",
+          "body": "Keep above heart if possible."
+        },
+        {
+          "id": "no_remove_pads",
+          "title": "Do not remove soaked pads", 
+          "body": "Add new layers on top; keep pressure."
+        },
+        {
+          "id": "watch_shock",
+          "title": "Watch for shock",
+          "body": "Pale skin, fast pulse, confusion. Keep warm."
+        }
+      ]
+    },
+    {
+      "id": "cpr_basics",
+      "umbrella": "HEALTH",
+      "title": "CPR Basics",
+      "oneLiner": "30 compressions / 2 breaths timing aid.",
+      "cta": "Start CPR", 
+      "urgency": "EMERGENCY",
+      "etaMin": 3,
+      "origin": "System",
+      "createdAt": "2025-08-08T00:00:00.000Z",
+      "updatedAt": "2025-08-08T00:00:00.000Z",
+      "steps": [
+        {
+          "id": "check_responsiveness",
+          "title": "Check responsiveness",
+          "body": "Tap shoulders firmly, shout 'Are you okay?' loudly. Look for any response, movement, or normal breathing. If unresponsive, proceed immediately."
+        },
+        {
+          "id": "call_911",
+          "title": "Call 911", 
+          "body": "Get help immediately before starting CPR. If others present, point to specific person and say 'You call 911'. Request AED if available nearby."
+        },
+        {
+          "id": "position_hands",
+          "title": "Position hands",
+          "body": "Heel of one hand on center of chest between nipples, interlock fingers of other hand. Keep arms straight, shoulders directly over hands."
+        },
+        {
+          "id": "compressions_30",
+          "title": "30 compressions",
+          "body": "Push hard and fast at least 2 inches deep, 100-120 per minute. Let chest return completely between compressions. Count out loud.",
+          "timerSec": 15
+        },
+        {
+          "id": "rescue_breaths",
+          "title": "2 rescue breaths", 
+          "body": "Tilt head back, lift chin, pinch nose closed. Seal mouth with your mouth and give 2 breaths, each lasting 1 second. Watch for chest rise."
+        },
+        {
+          "id": "continue_cycles",
+          "title": "Continue cycles",
+          "body": "Repeat 30 compressions and 2 breaths continuously. Don't stop until emergency services arrive or person starts breathing normally. Switch rescuers every 2 minutes if possible."
+        }
+      ]
+    },
+    {
+      "id": "hypothermia",
+      "umbrella": "HEALTH",
+      "title": "Hypothermia",
+      "oneLiner": "Core rewarming and safe handling.", 
+      "cta": "Warm Up",
+      "urgency": "WARNING",
+      "etaMin": 20,
+      "origin": "System",
+      "createdAt": "2025-08-08T00:00:00.000Z",
+      "updatedAt": "2025-08-08T00:00:00.000Z",
+      "steps": [
+        {
+          "id": "move_shelter",
+          "title": "Move to warm shelter",
+          "body": "Remove from cold environment. Handle gently to avoid cardiac arrythmia."
+        },
+        {
+          "id": "remove_wet",
+          "title": "Remove wet clothing",
+          "body": "Cut off if necessary. Replace with dry, loose layers."
+        },
+        {
+          "id": "warm_core",
+          "title": "Warm core first", 
+          "body": "Heat packs to chest, neck, armpits. Avoid extremities first."
+        },
+        {
+          "id": "monitor_vitals",
+          "title": "Monitor breathing",
+          "body": "Check pulse for full 60 seconds. Be prepared for CPR if needed."
+        }
+      ]
+    },
+    {
+      "id": "wind_shelter",
+      "umbrella": "SURVIVE", 
+      "title": "Wind Shelter Basics",
+      "oneLiner": "A-frame tarp shelter when wind rips your tent.",
+      "cta": "Build Shelter",
+      "urgency": "WARNING",
+      "etaMin": 15,
+      "origin": "System",
+      "createdAt": "2025-08-08T00:00:00.000Z",
+      "updatedAt": "2025-08-08T00:00:00.000Z",
+      "steps": [
+        {
+          "id": "find_leeward",
+          "title": "Find leeward",
+          "body": "Behind rock, trees, or slope."
+        },
+        {
+          "id": "a_frame",
+          "title": "A-frame", 
+          "body": "Tripod frame; ridge line taut."
+        },
+        {
+          "id": "tarp_leeward",
+          "title": "Tarp on leeward",
+          "body": "Stake low; close windward side."
+        },
+        {
+          "id": "weight_edges",
+          "title": "Weight edges",
+          "body": "Rocks/packs every 50 cm for stability."
+        }
+      ]
+    },
+    {
+      "id": "water_purify",
+      "umbrella": "SURVIVE",
+      "title": "Water Purification",
+      "oneLiner": "Boil, filter, or tablets—choose quickly.",
+      "cta": "Purify Water",
+      "urgency": "INFO", 
+      "etaMin": 8,
+      "origin": "System",
+      "createdAt": "2025-08-08T00:00:00.000Z",
+      "updatedAt": "2025-08-08T00:00:00.000Z",
+      "steps": [
+        {
+          "id": "assess_source",
+          "title": "Assess water source",
+          "body": "Clear running water best. Avoid stagnant or animal-contaminated sources."
+        },
+        {
+          "id": "pre_filter", 
+          "title": "Pre-filter if cloudy",
+          "body": "Cloth or sand/gravel layers to remove debris."
+        },
+        {
+          "id": "boil_method",
+          "title": "Boiling method",
+          "body": "Rolling boil for 1 minute (3 minutes above 6,500ft altitude)."
+        },
+        {
+          "id": "chemical_backup",
+          "title": "Chemical backup",
+          "body": "Purification tablets or 2 drops bleach per liter. Wait 30 minutes."
+        }
+      ]
+    },
+    {
+      "id": "wildlife_snake",
+      "umbrella": "SURVIVE",
+      "title": "Wildlife: Snakebite", 
+      "oneLiner": "Immobilize and monitor swelling; no cutting.",
+      "cta": "Stabilize",
+      "urgency": "EMERGENCY",
+      "etaMin": 10,
+      "origin": "System",
+      "createdAt": "2025-08-08T00:00:00.000Z",
+      "updatedAt": "2025-08-08T00:00:00.000Z",
+      "steps": [
+        {
+          "id": "immobilize_limb",
+          "title": "Immobilize limb",
+          "body": "Keep below heart; minimize movement."
+        },
+        {
+          "id": "remove_jewelry",
+          "title": "Remove rings/watches", 
+          "body": "Swelling may trap jewelry."
+        },
+        {
+          "id": "no_cutting",
+          "title": "No cutting or suction",
+          "body": "Do not apply tourniquet or ice."
+        },
+        {
+          "id": "observe_symptoms",
+          "title": "Observe symptoms",
+          "body": "Pain, swelling, breathing issues."
+        }
+      ]
+    },
+    {
+      "id": "flat_tire",
+      "umbrella": "FIX",
+      "title": "Flat Tire Kit",
+      "oneLiner": "Safe roadside wheel change.",
+      "cta": "Change Wheel",
+      "urgency": "INFO", 
+      "etaMin": 12,
+      "origin": "System",
+      "createdAt": "2025-08-08T00:00:00.000Z",
+      "updatedAt": "2025-08-08T00:00:00.000Z",
+      "steps": [
+        {
+          "id": "secure_car",
+          "title": "Secure car",
+          "body": "Hazards, handbrake, wheel chock. Make sure the car is on flat, solid ground away from traffic. Set parking brake and turn on hazard lights for visibility."
+        },
+        {
+          "id": "loosen_lugs",
+          "title": "Loosen lugs",
+          "body": "Quarter turn while on ground. Use the wrench in a counter-clockwise direction to break the initial resistance while tire still has traction."
+        },
+        {
+          "id": "jack_swap", 
+          "title": "Jack & swap",
+          "body": "Jack at reinforced point; replace wheel. Locate the proper jacking point in your owner's manual. Raise the car until the flat tire is completely off the ground."
+        },
+        {
+          "id": "tighten_pattern",
+          "title": "Tighten cross pattern",
+          "body": "Lower car; torque diagonally. Hand-tighten in a star pattern, lower the jack, then fully tighten with the wrench using the same pattern."
+        }
+      ]
+    },
+    {
+      "id": "bike_chain",
+      "umbrella": "FIX",
+      "title": "Bike Chain Repair",
+      "oneLiner": "Re-seat, quick link, tension check.",
+      "cta": "Fix Chain",
+      "urgency": "INFO",
+      "etaMin": 10, 
+      "origin": "System",
+      "createdAt": "2025-08-08T00:00:00.000Z",
+      "updatedAt": "2025-08-08T00:00:00.000Z",
+      "steps": [
+        {
+          "id": "assess_damage",
+          "title": "Assess chain damage",
+          "body": "Check if chain is derailed, broken, or just loose."
+        },
+        {
+          "id": "derail_fix",
+          "title": "If derailed",
+          "body": "Lift rear wheel, pedal slowly while guiding chain back onto gears."
+        },
+        {
+          "id": "broken_link",
+          "title": "If broken link", 
+          "body": "Use chain tool or quick link to remove damaged section and reconnect."
+        },
+        {
+          "id": "test_tension",
+          "title": "Test chain tension",
+          "body": "Should have 1/2 inch play. Adjust rear derailleur if needed."
+        }
+      ]
+    },
+    {
+      "id": "quick_phrases",
+      "umbrella": "SPEAK",
+      "title": "Quick Phrases PL↔ES",
+      "oneLiner": "Show or play key phrases instantly.",
+      "cta": "Speak Phrase",
+      "urgency": "INFO",
+      "etaMin": 1,
+      "origin": "System", 
+      "createdAt": "2025-08-08T00:00:00.000Z",
+      "updatedAt": "2025-08-08T00:00:00.000Z",
+      "steps": [
+        {
+          "id": "need_help",
+          "title": "I need help",
+          "body": "\"Necesito ayuda, por favor.\""
+        },
+        {
+          "id": "headache",
+          "title": "I have a headache",
+          "body": "\"Me duele la cabeza.\""
+        },
+        {
+          "id": "water_location",
+          "title": "Where is drinking water?",
+          "body": "\"¿Dónde hay agua potable?\""
+        }
+      ]
+    },
+    {
+      "id": "city_lost", 
+      "umbrella": "SPEAK",
+      "title": "Lost in City",
+      "oneLiner": "Find main streets & transit hubs.",
+      "cta": "Get Directions",
+      "urgency": "INFO",
+      "etaMin": 4,
+      "origin": "System",
+      "createdAt": "2025-08-08T00:00:00.000Z",
+      "updatedAt": "2025-08-08T00:00:00.000Z",
+      "steps": [
+        {
+          "id": "find_landmark",
+          "title": "Find visible landmark",
+          "body": "Look for tall buildings, bridges, or monuments you can describe."
+        },
+        {
+          "id": "ask_directions",
+          "title": "Ask for main street", 
+          "body": "\"Where is [main street name]?\" Point to help with language barriers."
+        },
+        {
+          "id": "transit_hubs",
+          "title": "Locate transit hub",
+          "body": "Bus station, train station, or subway entrance usually has maps."
+        },
+        {
+          "id": "note_path",
+          "title": "Note return path",
+          "body": "Remember key turns and landmarks for getting back."
+        }
+      ]
+    }
+  ]
+}

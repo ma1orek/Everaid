@@ -1,0 +1,102 @@
+{
+  "categories": {
+    "health": {
+      "file": "health.svg",
+      "lucide": "heart-pulse",
+      "custom": false
+    },
+    "survive": {
+      "file": "survive.svg", 
+      "lucide": "mountain",
+      "custom": false
+    },
+    "fix": {
+      "file": "fix.svg",
+      "lucide": "wrench", 
+      "custom": false
+    },
+    "speak": {
+      "file": "speak.svg",
+      "lucide": "message-square",
+      "custom": false
+    }
+  },
+  "app": {
+    "logo": {
+      "file": "everaid-logo.svg",
+      "lucide": null,
+      "custom": true
+    },
+    "heart": {
+      "file": "heart.svg",
+      "lucide": "heart",
+      "custom": false
+    }
+  },
+  "actions": {
+    "bandage": {
+      "file": "bandage.svg", 
+      "lucide": "bandage",
+      "custom": false
+    },
+    "shelter": {
+      "file": "shelter.svg",
+      "lucide": "home",
+      "custom": false
+    },
+    "wrench": {
+      "file": "wrench.svg",
+      "lucide": "wrench",
+      "custom": false
+    },
+    "flashlight": {
+      "file": "flashlight.svg",
+      "lucide": "flashlight",
+      "custom": false
+    },
+    "microchip": {
+      "file": "microchip.svg",
+      "lucide": "cpu", 
+      "custom": false
+    }
+  },
+  "urgency": {
+    "emergency": {
+      "file": "alert-circle.svg",
+      "lucide": "alert-circle",
+      "custom": false
+    },
+    "warning": {
+      "file": "alert-triangle.svg",
+      "lucide": "alert-triangle", 
+      "custom": false
+    },
+    "info": {
+      "file": "info.svg",
+      "lucide": "info",
+      "custom": false
+    }
+  },
+  "navigation": {
+    "back": {
+      "file": "arrow-left.svg",
+      "lucide": "arrow-left",
+      "custom": false
+    },
+    "forward": {
+      "file": "arrow-right.svg", 
+      "lucide": "arrow-right",
+      "custom": false
+    },
+    "close": {
+      "file": "x.svg",
+      "lucide": "x",
+      "custom": false
+    },
+    "menu": {
+      "file": "menu.svg",
+      "lucide": "menu",
+      "custom": false
+    }
+  }
+}
